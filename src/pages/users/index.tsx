@@ -10,10 +10,13 @@ import { Sidebar } from "../../components/Sidebar";
 import { api } from "../../services/api";
 import { useUsers } from "../../services/hooks/useUsers";
 import { queryClient } from "../../services/queryClient";
+import { getUsers } from "../../services/hooks/useUsers";
 
-export default function UserList() {
+export default function UserList({ users }) {
   const [page, setPage] = useState(1)
-  const { data, isLoading, isFetching, error } = useUsers(page)
+  const { data, isLoading, isFetching, error } = useUsers(page, {
+    initialData: users
+  })
 
   const isWideVersion = useBreakpointValue({
     base: false,
@@ -118,12 +121,19 @@ export default function UserList() {
 }
 
 export const getServerSideProps: GetServerSideProps = async () => {
+  const { users, totalCount } = await getUsers(1);
 
+<<<<<<< HEAD
   const users = useUsers
 
   return {
     props: {
 
+=======
+  return {
+    props: {
+      users,
+>>>>>>> b8a5d6b9a58527bcfea458ac38bb16fd1677b89a
     }
   }
 }
