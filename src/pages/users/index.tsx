@@ -119,4 +119,11 @@ export default function UserList() {
 
 export const getServerSideProps: GetServerSideProps = async () => {
 
+  const users = useUsers
+
+  return {
+    props: {
+
+    }
+  }
 }
