@@ -1,14 +1,14 @@
 # DashGo
 
-### Objetivo
-Desenvolvido no treinamento Ignite da Rocketseat
+### Objective
+Developed in the Rocketseat's Ignite training
 
-### Tecnologias
+### Technologies
 * Next.js (React)
 * ChakraUI
 
 ### Page - Dashboard
 ![Dashboard](./public/Screenshot1.png)
 
-### Page - Usuários
+### Page - Users
 ![Users](./public/Screenshot2.png)
